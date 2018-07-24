@@ -5,7 +5,9 @@ To run these app, in root directory, run:
 $ export GOPATH=$PWD
 
 Then building schema:
+
 $ go build -o binschema schema.go
+
 $ ./binschema
 
 ```bash
