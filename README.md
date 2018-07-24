@@ -1,6 +1,4 @@
-This project is REST Full API for managing currency rates
-
-To run these app, in root directory, run:
+This project is REST Full API for managing currency rates, To run these app, in root directory, run:
 
 $ export GOPATH=$PWD
 
