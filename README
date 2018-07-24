@@ -7,6 +7,7 @@ $ export GOPATH=$PWD
 Then building schema:
 $ go build -o binschema schema.go
 $ ./binschema
+
 ```bash
 schema command usage:
 
@@ -15,8 +16,10 @@ schema command usage:
         orm syncdb         - syncdb model to table
         [options] -v       - verbose output
 ```
+
 $ ./binschema orm syncdb -force
 output will be like this
+
 ```bash
 drop table `dailyexchange`
     DROP TABLE IF EXISTS `dailyexchange`
@@ -34,6 +37,9 @@ create table `dailyexchange`
     ) ENGINE=InnoDB;
 
 ```
+
 $ ./binschema sample
+
 ```bash Insert successfully = 6 ```
+
 $ go run app.go
