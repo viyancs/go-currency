@@ -1,3 +1,10 @@
+/**
+ *  this file usage for testing reliable databse when big data is come
+ *
+ *  created by @viyancs, 25/07/2018
+ *  make sure always create simple code and clean code,
+ *  always give mark comment for easy maintenancen
+ */
 package sqltest
 
 import (
