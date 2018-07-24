@@ -8,7 +8,7 @@ Then building schema:
 $ go build -o binschema schema.go
 $ ./binschema
 
-```bash
+``` bash
 schema command usage:
 
         sample             - importing sample data
