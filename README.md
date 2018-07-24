@@ -20,7 +20,7 @@ schema command usage:
 ```
 
 $ ./binschema orm syncdb -force
-output will be like this
+
 
 ```bash
 drop table `dailyexchange`
