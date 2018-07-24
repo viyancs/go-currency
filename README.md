@@ -42,6 +42,8 @@ create table `dailyexchange`
 
 $ ./binschema sample
 
-```bash Insert successfully = 6 ```
+```bash 
+Insert successfully = 6 
+```
 
 $ go run app.go
