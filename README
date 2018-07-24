@@ -1,0 +1,39 @@
+This project is REST Full API for managing currency rates
+
+To run these app, in root directory, run:
+
+$ export GOPATH=$PWD
+
+Then building schema:
+$ go build -o binschema schema.go
+$ ./binschema
+<pre>
+schema command usage:
+
+        sample             - importing sample data
+        orm syncdb -force  - syncdb model to table by droping table first
+        orm syncdb         - syncdb model to table
+        [options] -v       - verbose output
+</pre>
+$ ./binschema orm syncdb -force
+output will be like this
+<pre>
+drop table `dailyexchange`
+    DROP TABLE IF EXISTS `dailyexchange`
+
+create table `dailyexchange`
+    -- --------------------------------------------------
+    --  Table Structure for `main.Dailyexchange`
+    -- --------------------------------------------------
+    CREATE TABLE IF NOT EXISTS `dailyexchange` (
+        `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY,
+        `c_from` varchar(3) NOT NULL DEFAULT '' ,
+        `c_to` varchar(3) NOT NULL DEFAULT '' ,
+        `rate` double precision NOT NULL DEFAULT 0 ,
+        `date` datetime NOT NULL
+    ) ENGINE=InnoDB;
+
+</pre>
+$ ./binschema sample
+<pre>Insert successfully = 6 </pre>
+$ go run app.go
