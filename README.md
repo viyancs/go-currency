@@ -1,23 +1,26 @@
-This project is REST Full API for managing currency rates
-
-To run these app, in root directory, run:
+This project is REST Full API for managing currency rates, To run these app, in root directory, run:
 
 $ export GOPATH=$PWD
 
 Then building schema:
+
 $ go build -o binschema schema.go
+
 $ ./binschema
-<pre>
+
+```bash
 schema command usage:
 
         sample             - importing sample data
         orm syncdb -force  - syncdb model to table by droping table first
         orm syncdb         - syncdb model to table
         [options] -v       - verbose output
-</pre>
+```
+
 $ ./binschema orm syncdb -force
-output will be like this
-<pre>
+
+
+```bash
 drop table `dailyexchange`
     DROP TABLE IF EXISTS `dailyexchange`
 
@@ -33,7 +36,12 @@ create table `dailyexchange`
         `date` datetime NOT NULL
     ) ENGINE=InnoDB;
 
-</pre>
+```
+
 $ ./binschema sample
-<pre>Insert successfully = 6 </pre>
+
+```bash 
+Insert successfully = 6 
+```
+
 $ go run app.go
