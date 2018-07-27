@@ -3,13 +3,13 @@ LABEL maintainer "viyancs"
 
 EXPOSE 8282
 WORKDIR /currency
-COPY . .
+COPY ./cmd,./test,./models,./main.go .
 
 RUN export GOPATH=$PWD
 RUN go get -u github.com/go-gem/gem
 RUN go get -u github.com/astaxie/beego/orm
 RUN go get -u github.com/go-sql-driver/mysql
 RUN go get -u github.com/davecgh/go-spew/spew
-RUN go build -o binmain main.go
+RUN go build -a -o binmain main.go
 
 CMD ["./binmain"]

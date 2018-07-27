@@ -6,10 +6,10 @@ go get -u github.com/go-sql-driver/mysql
 
 
 //docker
-docker build --force-rm -t viyancs/golang-mysql-api .
-docker rm golang
-docker run -p 8282:8282 --name currency-go viyancs/golang-mysql
+docker build -t viyancs/golang-mysql-api . //build image docker
+docker run -p 8282:8282 --name currency-go viyancs/golang-mysql // make container and run it
+docker rm currency-go //remove container
+docker exec -ti currency-go bash //login into container in windows version if u use git bash u need prefix winpty ex "$ winpty docker exec -ti currency-go bash"
+docker run --name mysqldb -e MYSQL_ROOT_PASSWORD=root,MYSQL_DATABASE=test_go  -d mysql:5.7 // -d run in demon
 
-//masuk ke container
-docker exec -ti golang bash
-docker run --name mysqldb -e MYSQL_ROOT_PASSWORD=root  -d mysql:5.7
+docker exec -ti currency-go sh -c "cd cmd/schema && go build -a -o bintask task.go && ./bintask orm syncdb -force && ./bintask sample" //build and rebuild table with data sample
