@@ -36,7 +36,7 @@ type myMysqlDB struct {
 
 func (m *myMysqlDB) Running() bool {
 	m.once.Do(func() {
-		c, err := net.Dial("tcp", "localhost:3306")
+		c, err := net.Dial("tcp", "172.17.0.2:3306")
 		if err == nil {
 			m.running = true
 			c.Close()

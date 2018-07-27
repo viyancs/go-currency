@@ -1,5 +1,9 @@
 This project is REST Full API for managing currency rates, To run these app, in root directory, run:
 
+- mkdir go-currency
+- cd go-currency
+- git clone https://github.com/viyancs/go-currency.git .
+
 $ export GOPATH=$PWD
 
 Then building schema:

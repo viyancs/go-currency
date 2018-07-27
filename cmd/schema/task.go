@@ -1,5 +1,5 @@
 /**
- *  main file for start running rest api
+ *  main file for running comand line task
  *
  *  created by @viyancs, 26/07/2018
  *  make sure always create simple code and clean code,
