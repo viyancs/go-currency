@@ -6,10 +6,10 @@ go get -u github.com/go-sql-driver/mysql
 
 
 //docker
-docker build --force-rm -t viyancs/golang-mysql .
+docker build --force-rm -t viyancs/golang-mysql-api .
 docker rm golang
-docker run -p 8282:8282 --name golang viyancs/golang-mysql
+docker run -p 8282:8282 --name currency-go viyancs/golang-mysql
 
 //masuk ke container
 docker exec -ti golang bash
-docker run --name mysqldb -e MYSQL_ROOT_PASSWORD=root -d mysql:5.7
+docker run --name mysqldb -e MYSQL_ROOT_PASSWORD=root  -d mysql:5.7
