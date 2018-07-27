@@ -86,7 +86,7 @@ func (m *myMysqlDB) RunTest(t *testing.T, fn func(params)) {
 	}
 	pass, ok := getenvOk("GOSQLTEST_MYSQL_PASS")
 	if !ok {
-		pass = ""
+		pass = "root"
 	}
 	dbName := "test_go"
 	db, err := sql.Open("mysql", fmt.Sprintf("%s:%s@/%s", user,pass,dbName))

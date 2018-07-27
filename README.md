@@ -32,16 +32,16 @@ create table `dailyexchange`
         `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY,
         `c_from` varchar(3) NOT NULL DEFAULT '' ,
         `c_to` varchar(3) NOT NULL DEFAULT '' ,
-        `rate` double precision NOT NULL DEFAULT 0 ,
-        `date` datetime NOT NULL
+        `rate` double precision  NULL DEFAULT 0 ,
+        `date` datetime  NULL
     ) ENGINE=InnoDB;
 
 ```
 
 $ ./binschema sample
 
-```bash 
-Insert successfully = 6 
+```bash
+Insert successfully = 6
 ```
 
 $ go run app.go

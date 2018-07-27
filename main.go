@@ -58,6 +58,7 @@ func exchangeByDate(ctx *gem.Context) {
         return
     }
     rows := models.GetDailyexchange(date);
+    spew.Dump(rows) //trace dumb variable
     if (rows == nil) {
         datas := Jsonformat{Code: C_OK, Msg: DATA_NOT_FOUND}
         ctx.JSON(C_OK, datas)
