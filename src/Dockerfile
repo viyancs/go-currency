@@ -13,6 +13,6 @@ RUN go get -u github.com/go-gem/gem
 RUN go get -u github.com/astaxie/beego/orm
 RUN go get -u github.com/go-sql-driver/mysql
 RUN go get -u github.com/davecgh/go-spew/spew
-#RUN go build -a -o binmain main.go
+RUN go build -a -o binmain main.go
 
-CMD ["cd src && ./binmain"]
+CMD ["./binmain"]
