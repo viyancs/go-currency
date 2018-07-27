@@ -1,7 +1,7 @@
 This project is REST Full API for managing currency rates, To run these app, in root directory, run:
 
 - mkdir go-currency
-- cd go-currency
+- cd go-currency/src
 - git clone https://github.com/viyancs/go-currency.git .
 - docker build -t viyancs/golang-mysql-api --no-cache=true .
 - docker run --name mysqldb -e MYSQL_ROOT_PASSWORD=root,MYSQL_DATABASE=test_go -d mysql:5.7
