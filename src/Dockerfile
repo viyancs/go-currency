@@ -15,4 +15,4 @@ RUN go get -u github.com/go-sql-driver/mysql
 RUN go get -u github.com/davecgh/go-spew/spew
 #RUN go build -a -o binmain main.go
 
-CMD ["./binmain"]
+CMD ["cd src && ./binmain"]
