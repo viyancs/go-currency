@@ -12,8 +12,8 @@ Manual Installation
 - $ cd go-currency
 - $ git clone https://github.com/viyancs/go-currency.git .
 - $ cd src
-- $ docker build -t viyancs/golang-mysql-api --no-cache=true . (making image)
 - $ docker run --name mysqldb -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=test_go -e MYSQL_ROOT_HOST=% -d mysql:5.7 (run mysql container)
+- $ docker build -t viyancs/golang-mysql-api --no-cache=true . (making image)
 - $ docker run -p 8282:8282 --link mysqldb:mysqldb --name currency-go -d viyancs/golang-mysql-api (run web app container that provide http REST API)
 - $ docker exec -ti currency-go sh -c "cd cmd/schema && go build -a -o bintask task.go && ./bintask orm syncdb -force && ./bintask sample" (build and rebuild table with data sample)
 
