@@ -29,6 +29,12 @@ API Docs Usage
 
 - GET http://localhost:8282/exchange/(:date) (to get exchange by date example :date = "2018-7-25")
 
+- POST http://localhost:8282/exchange (insert new exchange) with body params like this :
+    - date => '2017-08-25'
+    - rate => '100000000'
+    - from => 'BTC'
+    - to   => 'IDR'
+    
 ```bash
     {
     "code": 200,
@@ -37,14 +43,6 @@ API Docs Usage
     "total": 0
     }
 ```
-
-- POST http://localhost:8282/exchange (insert new exchange) with body params like this :
-    - date => '2017-08-25'
-    - rate => '100000000'
-    - from => 'BTC'
-    - to   => 'IDR'
-    
-
     
 - POST http://localhost:8282/track (insert new track without exchang eand date)
     - from => 'WAVES'
