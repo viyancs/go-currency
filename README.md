@@ -2,8 +2,8 @@ This project is REST Full API for managing currency rates, using docker with 2 c
 
 Quick Installation
 ===========
-$ chmod +x install.sh
-$ ./install.sh
+- $ chmod +x install.sh
+- $ ./install.sh
 
 Manual Installation
 ==========
@@ -19,16 +19,16 @@ Manual Installation
 
 API Docs Usage
 ==========
-GET http://localhost:8282/exchange (to get all exchange)
-GET http://localhost:8282/exchange/(:date) (to get exchange by date example :date = "2018-7-25")
-POST http://localhost:8282/exchange (insert new exchange) with body params like this :
+- GET http://localhost:8282/exchange (to get all exchange)
+- GET http://localhost:8282/exchange/(:date) (to get exchange by date example :date = "2018-7-25")
+- POST http://localhost:8282/exchange (insert new exchange) with body params like this :
     - date => '2017-08-25'
     - rate => '100000000'
     - from => 'BTC'
     - to   => 'IDR'
-POST http://localhost:8282/track (insert new track without exchang eand date)
+- POST http://localhost:8282/track (insert new track without exchang eand date)
     - from => 'WAVES'
     - to   => 'IDR'
-PUT http://localhost:8282/exchange (delete track by {from} and {to} field)
+- PUT http://localhost:8282/exchange (delete track by {from} and {to} field)
     - from => 'WAVES'
     - to => 'IDR'
