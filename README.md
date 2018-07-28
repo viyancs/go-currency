@@ -21,15 +21,44 @@ Manual Installation
 API Docs Usage
 ==========
 - GET http://localhost:8282/exchange (to get all exchange)
+
+``` bash
+{"code":200,"results":[{"avg 2 days ago":"90","c_from":"GBP","c_to":"INR","date":"2018-07-25 00:00:00","id":"4","rate":"90.4866"},{"avg 2 days ago":"14750","c_from":"USD","c_to":"IDR","date":"2018-07-25 00:00:00","id":"5","rate":"14750"},{"avg 2 days ago":"1","c_from":"USD","c_to":"GBP","date":"2018-07-25 00:00:00","id":"6","rate":"0.761913"},{"avg 2 days ago":"0","c_from":"USD","c_to":"JPN","date":"2018-07-25 00:00:00","id":"7","rate":"insufficient data"},{"avg 2 days ago":"0","c_from":"JPN","c_to":"GBP","date":"2018-07-25 00:00:00","id":"8","rate":"insufficient data"},{"avg 2 days ago":"130000000","c_from":"BTC","c_to":"IDR","date":"2018-07-25 00:00:00","id":"10","rate":"130000000"}],"msg":"","total":6}
+
+```
+
 - GET http://localhost:8282/exchange/(:date) (to get exchange by date example :date = "2018-7-25")
+
+```bash
+    {
+    "code": 200,
+    "results": null,
+    "msg": "12",
+    "total": 0
+    }
+```
+
 - POST http://localhost:8282/exchange (insert new exchange) with body params like this :
     - date => '2017-08-25'
     - rate => '100000000'
     - from => 'BTC'
     - to   => 'IDR'
+    
+
+    
 - POST http://localhost:8282/track (insert new track without exchang eand date)
     - from => 'WAVES'
     - to   => 'IDR'
+    
 - PUT http://localhost:8282/exchange (delete track by {from} and {to} field)
     - from => 'WAVES'
     - to => 'IDR'
+    
+ ``` bash 
+ {
+    "code": 200,
+    "results": null,
+    "msg": "success delete",
+    "total": 0
+}
+ ```
