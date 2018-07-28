@@ -1,16 +1,20 @@
-This project is REST Full API for managing currency rates, using docker with 2 container first currency-go container  for web app second is mysql container for database ,if u want to  deploy this app, run:
+This project is REST Full API for managing currency rates, using docker with 2 container first currency-go container  for web app second is mysql container for database ,if you want to  deploy this app please follow this guide :
 
-Installation
+Quick Installation
 ===========
+$ chmod +x install.sh
+$ ./install.sh
 
-- mkdir go-currency
-- cd go-currency
-- git clone https://github.com/viyancs/go-currency.git .
-- cd src
-- docker build -t viyancs/golang-mysql-api --no-cache=true . (making image)
-- docker run --name mysqldb -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=test_go -e  MYSQL_ROOT_HOST=% -d mysql:5.7 (run mysql container)
-- docker run -p 8282:8282 --name currency-go viyancs/golang-mysql-api (run web app container that provide http REST API)
-- docker exec -ti currency-go sh -c "cd cmd/schema && go build -a -o bintask task.go && ./bintask orm syncdb -force && ./bintask sample" (build and rebuild table with data sample)
+Manual Installation
+==========
+- $ mkdir go-currency
+- $ cd go-currency
+- $ git clone https://github.com/viyancs/go-currency.git .
+- $ cd src
+- $ docker build -t viyancs/golang-mysql-api --no-cache=true . (making image)
+- $ docker run --name mysqldb -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=test_go -e  MYSQL_ROOT_HOST=% -d mysql:5.7 (run mysql container)
+- $ docker run -p 8282:8282 --name currency-go viyancs/golang-mysql-api (run web app container that provide http REST API)
+- $ docker exec -ti currency-go sh -c "cd cmd/schema && go build -a -o bintask task.go && ./bintask orm syncdb -force && ./bintask sample" (build and rebuild table with data sample)
 
 
 API Docs Usage
