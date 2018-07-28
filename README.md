@@ -2,6 +2,7 @@ This project is REST Full API for managing currency rates, using docker with 2 c
 
 Quick Installation
 ===========
+- download install file from https://raw.githubusercontent.com/viyancs/go-currency/master/install.sh
 - $ chmod +x install.sh
 - $ ./install.sh
 
