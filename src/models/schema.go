@@ -27,7 +27,7 @@ type Dailyexchange struct {
 func init(){
     orm.RegisterModel(new(Dailyexchange))
     orm.RegisterDriver("mysql", orm.DRMySQL)
-    orm.RegisterDataBase("default", "mysql", "root:root@tcp(172.17.0.2:3306)/test_go?charset=utf8", 30)
+    orm.RegisterDataBase("default", "mysql", "root:root@tcp(172.17.0.2:3306)/test_go", 30)
 }
 
 func GetDailyexchange(params ...string) []orm.Params{

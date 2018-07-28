@@ -1,8 +1,7 @@
 root dir /
-go get -u github.com/go-gem/gem
-go get -u github.com/asaskevich/govalidator
-go get -u github.com/astaxie/beego/orm
-go get -u github.com/go-sql-driver/mysql
+go get -u github.com/go-gem/gem &&
+go get -u github.com/astaxie/beego/orm &&
+go get -u github.com/go-sql-driver/mysql &&
 go get -u github.com/davecgh/go-spew/spew
 
 

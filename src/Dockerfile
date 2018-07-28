@@ -3,11 +3,12 @@ LABEL maintainer "viyancs"
 
 EXPOSE 8282
 
-
+RUN apt-get install tzdata
+ENV TZ Asia/Jakarta
 
 ENV GOPATH /currency
-WORKDIR $GOPATH
-COPY cmd test models main.go ./
+WORKDIR $GOPATH/src
+COPY . .
 
 RUN go get -u github.com/go-gem/gem
 RUN go get -u github.com/astaxie/beego/orm
