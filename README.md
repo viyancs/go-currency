@@ -1,5 +1,17 @@
 This project is REST Full API for managing currency rates, using docker with 2 container first currency-go container  for web app second is mysql container for database ,if you want to  deploy this app please follow this guide :
 
+Requiretment
+============
+- golang
+- docker
+- mysql
+
+Technical Feature
+===================
+- ORM
+- RAW Query (Advanced)
+- Integration Test
+
 Quick Installation
 ===========
 - download install file from https://raw.githubusercontent.com/viyancs/go-currency/master/install.sh
