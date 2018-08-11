@@ -11,6 +11,7 @@ Technical Feature
 - ORM
 - RAW Query (Advanced)
 - Integration Test
+- Docker as Environment
 
 Quick Installation
 ===========
